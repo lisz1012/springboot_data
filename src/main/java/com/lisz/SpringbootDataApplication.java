@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class) //避免循环引用
+// 各种Component类，必须放在比这个main Class级别更低的包里，否则就要加@ComponentScan来指定
 public class SpringbootDataApplication {
 
 	public static void main(String[] args) {
