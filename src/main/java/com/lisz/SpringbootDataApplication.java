@@ -19,7 +19,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 // SpringApplication.prepareContext() 会把启动类加载到上下文应用环境里面（load方法）
 
 // 简而言之就是读取spring.factories这个文件，在某些配置的类上面添加一些注解，让他们能够被扫描到
-
+// AutoConfigurationImportSelector.getCandidateConfigurations()方法中，加载了spring.factories中的类
 // Program Arguments的 --debug参数可以使得Springboot在启动的时候，把自动装配的类都打印出来
 public class SpringbootDataApplication {
 
