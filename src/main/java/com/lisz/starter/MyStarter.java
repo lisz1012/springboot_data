@@ -1,7 +1,6 @@
 package com.lisz.starter;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -12,7 +11,6 @@ public class MyStarter {
 		System.out.println("MyStarter inited ... ");
 	}
 
-	@Bean
 	public Person person(){
 		return new Person();
 	}
