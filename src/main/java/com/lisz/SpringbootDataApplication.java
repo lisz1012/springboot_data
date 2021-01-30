@@ -21,7 +21,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 // 简而言之就是读取spring.factories这个文件，在某些配置的类上面添加一些注解，让他们能够被扫描到
 // AutoConfigurationImportSelector.getCandidateConfigurations()方法中，加载了spring.factories中的类
 // Program Arguments的 --debug参数可以使得Springboot在启动的时候，把自动装配的类都打印出来
-// onRefresh()方法启动各个组件，finishRefresh()方法才完成了Tomcat的启动，8080端口打开
+// onRefresh()方法启动各个组件，finishRefresh()方法才完成了Tomcat的启动，8080端口打开：WebServerStartStopLifecycle.start()
+// LifeCycleBase.stop()是一个shutdownHook，回调的钩子函数
 public class SpringbootDataApplication {
 
 	public static void main(String[] args) {
