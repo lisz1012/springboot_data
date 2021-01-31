@@ -22,7 +22,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 // AutoConfigurationImportSelector.getCandidateConfigurations()方法中，加载了spring.factories中的类
 // Program Arguments的 --debug参数可以使得Springboot在启动的时候，把自动装配的类都打印出来
 // onRefresh()方法启动各个组件，finishRefresh()方法才完成了Tomcat的启动，8080端口打开：WebServerStartStopLifecycle.start()
-// LifeCycleBase.stop()是一个shutdownHook，回调的钩子函数
+// LifeCycleBase.stop()是一个shutdownHook，回调的钩子函数. 关闭的顺序和启动的顺序相反：。。。 Engine， Service， Server
+// 读源码的同时那一张纸，把类名和方法名都记下来。一个人的技术功底好不好，通过其Debug就能看出来。先看Spring源码在看Springboot源码会好很多
 public class SpringbootDataApplication {
 
 	public static void main(String[] args) {
